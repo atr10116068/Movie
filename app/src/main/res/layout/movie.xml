@@ -7,51 +7,103 @@
     android:orientation="vertical"
     tools:context=".bleng">
 
+    <ImageView
+        android:id="@+id/backdrop_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/ic_launcher_background" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="15dp">
 
-        <TextView
-            android:textStyle="bold"
-            android:id="@+id/dJudul"
-            android:layout_width="280dp"
+        <ImageView
+            android:id="@+id/poster_path"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Judul"
-            android:textSize="25dp" />
+            tools:src="@drawable/ic_launcher_background" />
 
         <LinearLayout
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/dId"
+                android:id="@+id/original_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="234324" />
+                android:text="original_title"
+                android:textColor="@color/abu2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/dDate"
+                android:id="@+id/tagline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="23-42-2019" />
+                android:text="tagline"
+                android:textColor="@color/abu2" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/genres"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Genre : Belom buat"
+                    android:textColor="@color/abu2"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/popularity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="popularity"
+                        android:textColor="@color/abu2"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/release_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="release_date"
+                        android:textColor="@color/abu2"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
-        android:background="@color/abu2"
-        android:layout_margin="5dp"
-        android:id="@+id/dDetail"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:text="blablabla" />
+        android:layout_height="match_parent">
 
-
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:paddingTop="20dp"
+            android:text="Please wait..." />
+    </ScrollView>
 </LinearLayout>

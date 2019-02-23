@@ -19,8 +19,7 @@ public class Movie {
     private String id;
 
     public String getId() {
-        String idx="id : "+id;
-        return idx;
+        return id;
     }
 
     public void setId(String id) {

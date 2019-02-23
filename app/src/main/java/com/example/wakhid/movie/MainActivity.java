@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.TextView;
 
 import com.example.wakhid.movie.adapter.MovieAdapter;
 import com.example.wakhid.movie.model.Movie;
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                 for(int i=0;i<movieList.size();i++){
                     Movie movie = movieList.get(i);
-                    Log.i("Mm","result : "+movie.getTitle());
+                    Log.i("awal","result : "+movie.getTitle());
                 }
                 movieAdapter = new MovieAdapter(getApplicationContext(),movieList);
                 recyclerView.setAdapter(movieAdapter);

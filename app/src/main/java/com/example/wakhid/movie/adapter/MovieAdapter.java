@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,7 +32,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     }
 
     @Override
-    public MovieAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item,viewGroup,false);
         return  new ViewHolder(view);
     }
@@ -50,10 +51,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),bleng.class);
-                intent.putExtra("judul",movie.getTitle());
-                intent.putExtra("detail",movie.getOverview());
-                intent.putExtra("date",movie.getRelease_date());
-                intent.putExtra("id",movie.getId());
+                intent.putExtra("aidi",movie.getId());
                 v.getContext().startActivity(intent);
             }
         });
@@ -77,6 +75,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         private TextView tvTitle,tvOverview,tvDate;
         private ImageView img;
         private LinearLayout detail;
+
         public ViewHolder(View itemView) {
             super(itemView);
 
