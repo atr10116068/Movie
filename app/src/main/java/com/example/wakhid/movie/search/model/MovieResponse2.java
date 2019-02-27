@@ -2,6 +2,8 @@ package com.example.wakhid.movie.search.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 
 public class MovieResponse2 {
     @SerializedName("overview")
@@ -24,6 +26,28 @@ public class MovieResponse2 {
 
     @SerializedName("backdrop_path")
     private String backdrop_path;
+
+    @SerializedName("genres")
+    private ArrayList<Movie2> genres;
+
+    @SerializedName("vote_average")
+    private String vote_average;
+
+    public String getVote_average() {
+        return vote_average;
+    }
+
+    public void setVote_average(String vote_average) {
+        this.vote_average = vote_average;
+    }
+
+    public ArrayList<Movie2> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(ArrayList<Movie2> genres) {
+        this.genres = genres;
+    }
 
     public String getOverview() {
         return overview;
